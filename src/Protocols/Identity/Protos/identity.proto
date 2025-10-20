@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Grpc.Protocol.Identity";
+
+service IdentityGrpc {
+  // 注册身份
+  rpc Register (RegisterRequest) returns (RegisterReply);
+}
+
+message RegisterRequest {
+  string userName = 1;
+  string password  = 2;
+}
+
+message RegisterReply {
+  string message = 1;
+  int32 code = 2;
+}

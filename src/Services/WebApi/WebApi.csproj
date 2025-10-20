@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Grpc.Net.Client" Version="2.71.0" />
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.71.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.10" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+		<PackageReference Include="Zg.Grpc.Protos.Identity" Version="1.0.0" />
+		<PackageReference Include="Zg.Grpc.Protos.User" Version="1.0.0" />
+	</ItemGroup>
+
+	<!--<ItemGroup>
+		<ProjectReference Include="..\..\Protocols\Identity\Identity.csproj" />
+		<ProjectReference Include="..\..\Protocols\User\User.csproj" />
+	</ItemGroup>-->
+
+</Project>

@@ -1,0 +1,30 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Grpc.Protocol.User";
+
+service UserGrpc {
+  // 创建用户
+  rpc CreateUser (CreateUserRequest) returns (BaseReply);
+  // 更新信息
+  rpc UpdateUser (UpdateUserRequest) returns (BaseReply);
+}
+
+message CreateUserRequest {
+  // 唯一
+  string name = 1;
+}
+
+message UpdateUserRequest {
+  string name = 1;
+  google.protobuf.Timestamp bith_date = 2;
+  int32 gender = 3;
+  string phone_number = 4;
+  string department = 5;
+}
+
+message BaseReply {
+  string message = 1;
+  int32 code = 2;
+}
